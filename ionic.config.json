@@ -1,0 +1,7 @@
+{
+  "name": "REZA_MOBILE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
