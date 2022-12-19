@@ -1,0 +1,32 @@
+<ion-content>
+  <div id="head">
+    <img src="../assets/logoreza.jpg" weight= "50" height="200" />
+    <h3 id="head">INSCRIPTION</h3>
+    <br> <br>
+    <img src="../assets/user.png" weight= "120" height="120" />
+  </div><br>
+  <form>
+    <div class="contain">
+      <h5><input type="text" placeholder="Nom"id="rond"/></h5><br>
+      
+      <h5><input type="text" placeholder="Prénom"id="rond"/></h5><br>
+      
+      <h5><input type="text" placeholder="Sexe"id="rond"/></h5><br>
+      
+      <h5><input type="text" placeholder="Téléphone"id="rond"/></h5><br>
+      
+      <h5><input type="text" placeholder="Type d'utilisateur"id="rond"/></h5><br>
+      
+      <h5><input type="text" placeholder="Mot de passe"id="rond"/></h5><br>
+      
+      <h5><input type="text" placeholder="Confirmer votre mot de passe"id="rond"></h5>
+    </div>
+    <div class="btn">
+      <br>
+      <ion-button shape="round" >S'inscrire</ion-button>
+    </div>
+  </form>
+  <div class="linkcompte">
+    <h6 [routerLink]="['/login']">Avez-vous déjà un compte?</h6>
+  </div>
+</ion-content>

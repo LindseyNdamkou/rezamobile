@@ -1,0 +1,28 @@
+
+<ion-content>
+  <div id="head">
+    <img src="../assets/logoreza.jpg" weight= "50" height="200" />
+    <h3 id="head">CONNEXION</h3>
+    <br> <br>
+    <img src="../assets/user.png" weight= "120" height="120" />
+  </div>
+  <form>
+    <div class="contain">
+      <br> <br>
+      <h5 >
+        <input type="text" placeholder="Username" id="rond">
+      </h5>
+      <br>
+      <h5><input type="text" placeholder="Mot de passe"id="rond"></h5>
+      <br>
+    </div>
+    <br>
+    <div class="btn">
+      <ion-button shape="round"[routerLink]="['/onglet/home']">Connexion</ion-button>
+    </div>
+  </form>
+  <br>
+  <div class="linkcompte">
+    <h6  [routerLink]="['/inscription']" >Créer un compte?</h6>
+  </div>
+</ion-content>

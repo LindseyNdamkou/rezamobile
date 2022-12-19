@@ -1,0 +1,108 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  #disposition{
+  
+     padding: -100px;
+     
+  }
+  #recherche {
+    
+      border: 5px 5px 5px 5px ;
+  }
+  #container {
+    background-color:  #7584cd  ;
+    border-radius:  0px 0px   120px 120px ;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 200px;
+    position: absolute;
+  }
+  .sous{
+    background-color:  #7584cd  ;
+    border-radius:  0px 0px   40px 40px ;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 150px;
+    position: absolute;
+  }
+  #user{
+    align-content: center;
+    text-align: center;
+    padding: 100px;
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #titre{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  #contenu , #contenu2 , #contenu3 , #contenu1 , #contenu4 , #head, .text{
+  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  
+  #head{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  
+  
+  ion-grid{
+    background-color: white;
+    border: 0px;
+  
+    border-radius:  0px 0px 0px 0px ;
+  
+  }
+  
+  
+  #logo{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+  }
