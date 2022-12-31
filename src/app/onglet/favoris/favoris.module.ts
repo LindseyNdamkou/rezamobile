@@ -17,4 +17,6 @@ import { FavorisPage } from './favoris.page';
   ],
   declarations: [FavorisPage]
 })
-export class FavorisPageModule {}
+export class FavorisPageModule {
+  
+}

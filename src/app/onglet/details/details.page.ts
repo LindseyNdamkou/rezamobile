@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SalleService } from 'src/app/services/salle.service';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPage implements OnInit {
 
-  constructor() { }
+  detail: any;
+  
+  
+  constructor(private salle: SalleService,private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    // console.log('test ngOnInit')
+    this.detail=JSON.parse(localStorage.getItem('detailsalle')!)
   }
 
+  ionViewWillEnter(){
+    // console.log('test ionView')
+    this.detail=JSON.parse(localStorage.getItem('detailsalle')!)
+  }
+ 
+  
+  ReservationProcess(reservation:any){
+    localStorage.setItem("reservation", JSON.stringify(reservation));
+    // console.log(detailsalle)
+    this.router.navigate(['onglet/formulairereservation']);
+}
 }

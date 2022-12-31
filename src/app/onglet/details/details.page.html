@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+  <div class="container">
+    <div class="sous">
+      <div id="user" >
+      </div>
+    </div>
+    <ion-toolbar id="toolbar" color="lavend">
+      <ion-buttons slot="start">
+        <ion-button  [routerLink]="['/onglet/home']">
+          <ion-icon color="light" slot="start" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <h4 id="logo">Détails de la salle</h4>
+    
+    </ion-toolbar>
+      <br><br><br><br><br><br><br>
+              
+      <ion-card id="containerS1" ><br><br>
+        <ion-grid class="design">
+          <ion-row size="12">
+            <ion-col size="5">
+              <img src="../assets/cvPhoto.jpg" />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-card-content>
+              <h2> <b>Nom:&nbsp;{{detail.nomSalle}}</b></h2> <br>
+              <h2><b>Lieu:&nbsp;{{ detail.quartier}} </b></h2> <br>
+              <h2><b>Ville:&nbsp;{{detail.ville}}</b></h2> <br>
+              <h2> <b>Equipements:<br><span *ngFor="let equip of detail.equipement">{{equip.nomEquipement}}&nbsp;&nbsp;({{equip.quantite}});&nbsp;</span></b></h2> <br>
+              <h2><b>Services:<br><span *ngFor="let serv of detail.service">{{serv.nomService}} &nbsp;</span></b></h2> <br>
+              <h2><b>Prix:&nbsp;{{detail.prix}} &nbsp;&nbsp;FCFA</b></h2> <br>
+              <h2><b>Statut:&nbsp;{{detail.statutSalle}} &nbsp;&nbsp;</b></h2> <br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <ion-button >Reserver</ion-button>
+              
+              <!-- <ion-button>Louer</ion-button><br> -->
+            
+        </ion-card-content>
+      </ion-card>
 
+       <br><br>
+      </div>
+    <div >
+  </div>
 </ion-content>

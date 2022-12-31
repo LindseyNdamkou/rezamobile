@@ -5,14 +5,11 @@
     </div>
       <ion-toolbar color="lavend">
         <ion-buttons slot="end"></ion-buttons>
-        <!-- <ion-buttons slot="start">
-          <ion-menu-button color="light"></ion-menu-button>
-        </ion-buttons> -->
         <br>
         <ion-searchbar></ion-searchbar>
       </ion-toolbar>
-      <br> <br> <br> <br> <br> <br>
-    <ion-card id="containerS1" ><br><br>
+      <!-- 
+    <ion-card id="containerS1"><br><br>
         <ion-grid class="design">
           <ion-row size="12">
             <ion-col size="5">
@@ -21,13 +18,56 @@
             <ion-col size="6">
             </ion-col>
           </ion-row>
+            {{fav.nomSalle}}
           <ion-row>
             <ion-col>
             </ion-col>
           </ion-row>
         </ion-grid>
+    </ion-card> -->
+    <br> <br> <br> <br> <br> <br>
+
+    <ion-card style="height: 120px;" *ngFor="let favoris of listeFavoris">
+      <div class="This-Salle" style="display: flex; height: 120px;">
+        <div class="imagge" style="flex:3; text-align: left; height: 120px; min-width: 20%; background-color: f5f5f5;">
+          <img src= "../assets/images/poppy10.pNg" alt="No image found" style="height: 120px;"/>
+        </div>
+        <div class="Infos" style="flex:5; text-align: left; max-width: 80%; padding: 8px;">
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="10">
+                <ion-label>
+                  <b>Nom:&nbsp;</b>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="10">
+                <ion-label>
+                  <b>Lieu:&nbsp;</b> 
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="10">
+                <ion-label>
+                  <b>Ville:&nbsp;{{favoris.ville}}</b> 
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="10">
+                <ion-label>
+                  <b>Statut:&nbsp;</b>               
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
     </ion-card>
       </div>
     <div>
   </div>
-</ion-content>
+</ion-content> 
+
