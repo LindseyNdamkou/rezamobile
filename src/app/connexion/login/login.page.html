@@ -6,19 +6,19 @@
     <br> <br>
     <img src="../assets/user.png" weight= "120" height="120" />
   </div>
-  <form>
+  <form  [formGroup]="formulairelogin" (ngSubmit)="onSubmit()">
     <div class="contain">
       <br> <br>
         <h5 >
-          <input type="text" placeholder="Username" id="rond">
+          <input type="text" formControlName="email" placeholder="Email" id="rond">
         </h5>
       <br>
-      <h5><input type="text" placeholder="Mot de passe"id="rond"></h5>
+      <h5><input type="password" formControlName="password" placeholder="Mot de passe"id="rond"></h5>
       <br>
     </div>
     <br>
     <div class="btn">
-      <ion-button shape="round"[routerLink]="['/onglet/home']">Connexion</ion-button>
+      <ion-button type="submit" shape="round">Connexion</ion-button>
     </div>
   </form>
   <br>

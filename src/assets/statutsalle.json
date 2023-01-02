@@ -1,13 +1,13 @@
 [
     {
         "nom": "Indisponible",
-        "id": 1
+        "idStatut": 1
 
          
     },
     {
         "nom": "Disponible",
-        "id": 2
+        "idStatut": 2
   
     }
    

@@ -5,25 +5,37 @@
     <br> <br>
     <img src="../assets/user.png" weight= "120" height="120" />
   </div><br>
-  <form>
+  <form  [formGroup]="formulaireInscription" (ngSubmit)="onSubmit()">
     <div class="contain">
-      <h5><input type="text" placeholder="Nom"id="rond"/></h5><br>
+      <h5><input type="text" formControlName="firstname" placeholder="Nom" id="firstname"/></h5><br>
       
-      <h5><input type="text" placeholder="Prénom"id="rond"/></h5><br>
+      <h5><input type="text"  formControlName="lastname" placeholder="Prénom" id="lastname"/></h5><br>
       
-      <h5><input type="text" placeholder="Sexe"id="rond"/></h5><br>
+      <h5>
+        <ion-label>Sexe : </ion-label>
+        <select   formControlName="sexe" class="form-control form-control-alternative" placeholder="Sexe">
+          <option *ngFor="let sex of listesexe" value="{{sex.ids}}">{{sex.libelle}}</option>
+        </select>
+      </h5><br>
+
+      <h5><input type="text" formControlName="email" placeholder="Email" id="email"/></h5><br>
       
-      <h5><input type="text" placeholder="Téléphone"id="rond"/></h5><br>
+      <h5><input type="text" formControlName="phone" placeholder="Téléphone" id="phone"/></h5><br>
       
-      <h5><input type="text" placeholder="Type d'utilisateur"id="rond"/></h5><br>
+      <h5>
+        <ion-label>Vous êtes un : </ion-label>
+        <select   formControlName="role" class="form-control form-control-alternative" placeholder="Type d'utilisateur ">
+          <option *ngFor="let role of typeUser" value="{{role.id}}">{{role.libelle}}</option>
+        </select>
+      </h5><br>
       
-      <h5><input type="text" placeholder="Mot de passe"id="rond"/></h5><br>
+      <h5><input type="password"  type="password" formControlName="password" placeholder="Mot de passe" id="password"/></h5><br>
       
-      <h5><input type="text" placeholder="Confirmer votre mot de passe"id="rond"></h5>
+      <!-- <h5><input type="password" placeholder="Confirmer votre mot de passe" id="password_confirm"></h5> -->
     </div>
     <div class="btn">
       <br>
-      <ion-button shape="round" >S'inscrire</ion-button>
+      <ion-button shape="round" type="submit" >S'inscrire</ion-button>
     </div>
   </form>
   <div class="linkcompte">

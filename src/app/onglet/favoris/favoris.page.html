@@ -4,7 +4,15 @@
     <div class="sous">
     </div>
       <ion-toolbar color="lavend">
-        <ion-buttons slot="end"></ion-buttons>
+        <ion-toolbar id="toolbar" color="lavend">
+          <ion-buttons slot="start">
+            <ion-button  [routerLink]="['/onglet/home']">
+              <ion-icon color="light" slot="start" name="arrow-back"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <h4 id="logo">Liste des favoris</h4>
+        
+        </ion-toolbar>
         <br>
         <ion-searchbar></ion-searchbar>
       </ion-toolbar>
