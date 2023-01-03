@@ -38,22 +38,23 @@ export class LoginPage implements OnInit {
       // this.formulaireInscription.value.firstname,this.formulaireInscription.value.lastname,
       console.log(this.formulairelogin.value)
 
-        this.clientservice.login(this.formulairelogin.value.email,this.formulairelogin.value.password).subscribe(result=>{
-        console.log(result);
+        this.clientservice.login(this.formulairelogin.value).subscribe(result=>{
+        console.log('Voici ce que le backend nous renvoi quand ça a trouvé un utilisateur: ',result);
         if (result!=null){
           alert(' connexion réussie !!! ')
           // Rediriger vers page d'acceuil
   
+          console.log('Voici ce que vous gardez dans le local storage: ',result);
           localStorage.setItem('infoClient',JSON.stringify(result))
           this.router.navigate(['onglet/home']);
           // this.router.navigate(['/onglet/home']);
         }else{
-          alert('Erreur de connexion')
+          alert('Erreur de connexion, Aucune information reçu')
         }
         
       },
       error=>{
-        alert('Erreur de connexion')
+        alert('Erreur de connexion, un gros problèmes est survenu')
         console.log(error.error)
       }
       )

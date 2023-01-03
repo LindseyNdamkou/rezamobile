@@ -8,6 +8,7 @@ import { __param } from 'tslib';
 })
 export class ClientService {
   private serverUrl= "http://localhost:3000/api/route/clientlog";
+  private secondServerUrl = "http://localhost:3000/api/route/client";
   private jsonUrl = 'assets';
 
   constructor(private http: HttpClient) { 
@@ -22,8 +23,8 @@ export class ClientService {
     return this.http.post<{}>(this.serverUrl+'/createclient',client_a_enregistrer);
   }
 
-  public login(mail: any,passwd: any): Observable<{}> {
-    return this.http.post<{}>(this.serverUrl+'/loginclient',+mail+'/'+passwd);
+  public login(login_info:{}): Observable<{}> {
+    return this.http.post<{}>(this.serverUrl+'/loginclient',login_info);
   }
   public inscription(formulaire: any): Observable<{}> {
     return this.http.post<{}>(this.serverUrl+'/signupclient',formulaire);
@@ -37,6 +38,10 @@ export class ClientService {
   }
   public TypeUser(): Observable<[]> {
     return this.http.get<[]>(this.jsonUrl+'/typeuser.json');
+  }
+
+  public recherClientParSonId(idClient:string): Observable<{}>{
+    return this.http.get<{}>(this.secondServerUrl+'/rechercherClientParId/'+idClient);
   }
   
 
