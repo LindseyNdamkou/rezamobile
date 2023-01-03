@@ -20,7 +20,7 @@ export class ClientService {
   }
   
   public EnregistrerClient(client_a_enregistrer: any):Observable<{}> {
-    return this.http.post<{}>(this.serverUrl+'/createclient',client_a_enregistrer);
+    return this.http.post<{}>(this.secondServerUrl+'/createclient',client_a_enregistrer);
   }
 
   public login(login_info:{}): Observable<{}> {
@@ -43,6 +43,11 @@ export class ClientService {
   public recherClientParSonId(idClient:string): Observable<{}>{
     return this.http.get<{}>(this.secondServerUrl+'/rechercherClientParId/'+idClient);
   }
+
+   public modifierclient(client_a_enregistrer:string): Observable<{}> {
+    return this.http.put<{}>(this.secondServerUrl+'/modifierClient/',client_a_enregistrer);
+  }
+
   
 
 }

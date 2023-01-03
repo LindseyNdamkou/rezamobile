@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'formulairereservation',
     loadChildren: () => import('./formulairereservation/formulairereservation.module').then( m => m.FormulairereservationPageModule)
   },
+  {
+    path: 'formulairemodifclient',
+    loadChildren: () => import('./formulairemodifclient/formulairemodifclient.module').then( m => m.FormulairemodifclientPageModule)
+  },
   
 
 ];

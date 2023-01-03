@@ -2,6 +2,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { ClientService } from "src/app/services/client.service";
 import { SalleService } from "src/app/services/salle.service";
 
 @Component({
@@ -11,6 +12,21 @@ import { SalleService } from "src/app/services/salle.service";
 })
 
 export class HomePage implements OnInit {
+
+  
+  idEtTokenClient:any
+  infosClient:any = {
+    "_id": "",
+    "firstname": "",
+    "lastname": "",
+    "email": "",
+    "sex": "",
+    "phone": "",
+    "role": "2",
+    "password": "",
+    "__v": 0
+};
+
   listeSalle : any;
   salleService: any;
   listfav: any;
@@ -26,7 +42,7 @@ export class HomePage implements OnInit {
   searchbarValue:String = ""
   formsearch: FormGroup | undefined ;
 
-  constructor(private salle: SalleService,private router: Router) {}
+  constructor(private salle: SalleService,private router: Router,private clientService: ClientService) {}
 
   ngOnInit(): void {
     this.afficherSalles();
@@ -97,5 +113,19 @@ CouleurStatut(){
   }
   else {}
   }
- 
+
+  ionViewDidEnter(){
+    this.idEtTokenClient = JSON.parse(localStorage.getItem('infoClient')!);
+    this.clientService.recherClientParSonId(this.idEtTokenClient.clientId).subscribe((client)=>{
+      //client represente les infos du client. On garde dans la variable infosClient. C'est ce qu'on va afficher sur le front
+      this.infosClient=client
+      console.log(this.infosClient)
+    },
+    (error)=>{
+      console.log(error.error)
+    })
+  }
+
 }
+
+ 

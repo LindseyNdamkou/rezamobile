@@ -14,6 +14,7 @@ export class ProfilPage implements OnInit {
     "firstname": "",
     "lastname": "",
     "email": "",
+    "sex": "",
     "phone": "",
     "role": "2",
     "password": "",
