@@ -8,7 +8,8 @@ import { __param } from 'tslib';
   providedIn: 'root'
 })
 export class SalleService {
-  private serverUrl= "http://localhost:3000/api/route/salle";
+  private serverUrl= "https://reza-back.azurewebsites.net/api/route/salle";
+  // private serverUrl= "http://localhost:3000/api/route/salle";
   ville: any;
   constructor(private http: HttpClient) {}
 
