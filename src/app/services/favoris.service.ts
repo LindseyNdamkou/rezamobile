@@ -9,7 +9,8 @@ import { __param } from 'tslib';
 })
 export class FavorisService {
 
-  private serverUrl= "http://localhost:3000/api/route/favoris";
+  private serverUrl= "https://reza-back.azurewebsites.net/api/route/favoris";
+  // private serverUrl= "http://localhost:3000/api/route/favoris";
 
   constructor(private http: HttpClient) {}
 
