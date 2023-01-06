@@ -7,8 +7,10 @@ import { __param } from 'tslib';
   providedIn: 'root'
 })
 export class ClientService {
-  private serverUrl= "http://localhost:3000/api/route/clientlog";
-  private secondServerUrl = "http://localhost:3000/api/route/client";
+  private serverUrl= "https://reza-back.azurewebsites.net/api/route/clientlog";
+  // private serverUrl= "http://localhost:3000/api/route/clientlog";
+  // private secondServerUrl = "http://localhost:3000/api/route/client";
+  private secondServerUrl = "https://reza-back.azurewebsites.net/api/route/client";
   private jsonUrl = 'assets';
 
   constructor(private http: HttpClient) { 
